@@ -1,0 +1,8 @@
+# Pitching Staff Manager
+A Data Visualization Tool for Bullpen and Overall Pitching Staff Management
+
+The Pitching Staff Manager is a simple tool powered by pybaseball and statcast to keep track of a team's usage of their pitching staff. It accumulates pitches thrown per outing over a one-week span for an individual team's pitching staff provided by the user (hardcoded in the given notebook), then charts them in an easily digestible format. Aside from listing the date and pitch count, the chart is color coded to include scenarios that may be hazardous to a pitcher's health and overall performance. Any time a pitcher is used in 3 out of 4 consecutive days or back-to-back days, the outings in question will be filled with a red hue. To achieve this, individual player, game, and team tables had to be constructed from the statcast feed, then players were matched with their corresponding teams and games. Once the pitch counts and dates were assembled into a pandas dataframe, I used a deque to traverse each row to check for the conditions that satisfied an 'overused' pitcher. Finally, I used matplotlib to convert the dataframe into a table with squares that were colored accordingly. Feel free to follow along with the notebook for more details. This project was a fun little introduction to using statcast data and can be used as a quick guide to bullpen management throughout the season.
+
+The image below shows the Atlanta Braves' staff usage during the week of April 1st, 2023, and is the same example that is hardcoded into the notebook. 
+
+![Screen Shot 2023-07-17 at 11 48 26 AM](https://github.com/jwertherUM/pitchingStaffManager/assets/55903014/14f78c54-8fb5-41ba-9168-64045bcadf19)
